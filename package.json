@@ -1,11 +1,10 @@
 {
-  "name": "playground",
   "main": "index.js",
   "scripts": {
     "debug": "ndb nodemon index.js",
     "benchmark": "LOG_VOID=true node benchmark.js",
-    "start": "nodemon | pino-pretty",
-    "test": "tape *.test.js"
+    "start": "nodemon index.js | pino-pretty",
+    "test": "tape *.test.js | tap-dot"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
@@ -18,6 +17,7 @@
     "ndb": "^1.1.5",
     "nodemon": "^2.0.7",
     "pino-pretty": "^4.5.0",
+    "tap-dot": "^2.0.0",
     "tape": "^5.1.1"
   }
 }
