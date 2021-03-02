@@ -19,5 +19,23 @@
     "pino-pretty": "^4.5.0",
     "tap-dot": "^2.0.0",
     "tape": "^5.1.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12
+    },
+    "rules": {
+      "comma-dangle": ["error", "always-multiline"],
+      "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": false }]
+    }
   }
 }
