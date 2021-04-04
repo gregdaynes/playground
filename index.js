@@ -1,10 +1,10 @@
-const logger = require('chip-log')
+const logger = require('pino')()
 
 module.exports = scratchFn
 module.exports.benchmarkable = () => scratchFn()
 
 function scratchFn () {
-  logger.info()
+  logger.info('scratchFn()')
 }
 
 logger.info('Init')
