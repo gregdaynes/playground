@@ -1,68 +1,38 @@
 {
   "main": "index.js",
   "scripts": {
-    "debug": "ndb node-dev --use_strict index.js",
+    "debug": "ndb nodemon --use_strict index.js",
     "benchmark": "node --use_strict benchmark.js",
-    "start": "node-dev --use_strict index.js | pino-pretty",
+    "start": "nodemon --use_strict index.js | pino-pretty",
     "setup": "rm -rf .git && npm install",
     "test": "tap --node-arg=--use_strict --reporter=spec"
   },
   "dependencies": {
-    "pino": "^6.11.2",
-    "pino-pretty": "^4.7.1"
+    "pino": "^6.13.3",
+    "pino-pretty": "^4.8.0"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "eslint": "^7.23.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-array-func": "^3.1.7",
-    "eslint-plugin-clean-regex": "^0.5.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-radar": "^0.2.1",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^29.0.0",
+    "eslint": "^7.32.0",
     "ndb": "^1.1.5",
-    "node-dev": "^6.6.0",
-    "tap": "^15.0.1"
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1",
+    "tap": "^15.0.10"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
   "eslintConfig": {
     "env": {
-      "browser": true,
-      "commonjs": true,
       "es2021": true,
       "node": true
     },
-    "plugins": [
-      "radar",
-      "unicorn",
-      "array-func",
-      "clean-regex",
-      "security"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "standard",
-      "plugin:array-func/recommended",
-      "plugin:radar/recommended",
-      "plugin:clean-regex/recommended",
-      "plugin:security/recommended"
-    ],
+    "extends": "eslint:recommended",
     "parserOptions": {
-      "ecmaVersion": 2021
+      "ecmaVersion": 12,
+      "sourceType": "module"
     },
-    "rules": {
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "object-property-newline": [
-        "error",
-        {
-          "allowAllPropertiesOnSameLine": false
-        }
-      ]
-    }
+    "rules": {}
   }
 }
