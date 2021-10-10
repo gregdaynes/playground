@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "pino": "^6.13.3",
-    "pino-pretty": "^4.8.0"
+    "pino-pretty": "^7.0.1"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.0",
     "ndb": "^1.1.5",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.13",
     "prettier": "^2.4.1",
     "tap": "^15.0.10"
   },
@@ -30,7 +30,7 @@
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-      "ecmaVersion": 12,
+      "ecmaVersion": 2022,
       "sourceType": "module"
     },
     "rules": {}
