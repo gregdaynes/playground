@@ -9,6 +9,7 @@
     "test": "tap --node-arg=--use_strict --reporter=spec"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "pino": "^7.6.3",
     "pino-pretty": "^7.3.0",
     "rot-js": "^2.2.0"
