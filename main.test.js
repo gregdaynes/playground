@@ -1,6 +1,8 @@
-import test from 'tape'
+import test from 'node:test'
+import assert from 'node:assert/strict'
 
-test('template', function (t) {
-  t.equal(true, true)
-  t.end()
+test('Main test suite', async (t) => {
+  await t.test('This is ok', () => {
+    assert.ok(true)
+  })
 })
